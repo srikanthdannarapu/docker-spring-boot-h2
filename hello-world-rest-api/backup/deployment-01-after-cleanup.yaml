@@ -21,7 +21,7 @@ spec:
         app: hello-world-rest-api
     spec:
       containers:
-      - image: sdannarapu/hello-world-rest-api:0.0.4-SNAPSHOT
+      - image: in28min/hello-world-rest-api:0.0.2.RELEASE
         imagePullPolicy: IfNotPresent
         name: hello-world-rest-api
       restartPolicy: Always
@@ -36,7 +36,7 @@ metadata:
   namespace: default
 spec:
   ports:
-  - nodePort: 32754
+  - nodePort: 30702
     port: 8080
     protocol: TCP
     targetPort: 8080
@@ -44,4 +44,3 @@ spec:
     app: hello-world-rest-api
   sessionAffinity: None
   type: LoadBalancer
-  
